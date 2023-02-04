@@ -1,9 +1,9 @@
-databases = ["Dokumenty", "FrontendUloziste", "Identity"];
+databases = ["docs", "storage", "ids"];
 
 for (var i = databases.length - 1; i >= 0; i--) {
   db = db.getSiblingDB(databases[i]);
 
-  db.createCollection("lada", function (err, collection) {
+  db.createCollection("col", function (err, collection) {
     collection.insert({ test: "value" });
   });
 
